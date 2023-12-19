@@ -16,7 +16,7 @@ type ExploreCardProp ={
 const ExploreCard = ({id , imgUrl, title, index,active,handleClick} : ExploreCardProp) => {
   return (
     <motion.div onClick={()=> handleClick(id)} variants={fadeIn({direction:'right' , type:'spring', delay:0.5 * index , duration:0.75})} className={` relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'} flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-100  ease-out-flex cursor-pointer`}>
-        <Image src={imgUrl} width={550} height={550} alt='test' className=' absolute w-full h-full object-cover rounded-[24px]'/>
+        <Image src={imgUrl} width={2550} height={2550} alt='test' className=' absolute w-full h-full object-cover rounded-[24px]'/>
         {active !== id ? (
             <h3 className=' font-semibold sm:text-[26px] text-[18px] absolute text-white z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]'>
                 {title}

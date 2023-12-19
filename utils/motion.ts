@@ -4,8 +4,8 @@ export const navVariants = {
       y: -50,
       transition: {
         type: 'spring',
-        stiffness: 300,
-        damping: 140,
+        stiffness: 200,
+        damping: 110,
       },
     },
     show: {
@@ -13,11 +13,31 @@ export const navVariants = {
       y: 0,
       transition: {
         type: 'spring',
-        stiffness: 90,
-        delay: 1,
+        stiffness: 40,
+        delay: 1.5,
       },
     },
   };
+export const navcontent = {
+    hidden: {
+      opacity: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 140,
+      },
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 90,
+        delay: 0.3,
+      },
+    },
+  };
+
+  
 
   type slideInProp = {
     direction : string,
@@ -124,8 +144,12 @@ export const navVariants = {
       },
     },
   });
+
+  type planetVariantsProp ={
+    direction : string
+  }
   
-  export const planetVariants = ({direction} : any) => ({
+  export const planetVariants = ({direction} : planetVariantsProp) => ({
     hidden: {
       x: direction === 'left' ? '-100%' : '100%',
       rotate: 120,
@@ -141,7 +165,12 @@ export const navVariants = {
     },
   });
   
-  export const zoomIn = ({delay, duration} : any) => ({
+  type zoomInProp ={
+    delay: number,
+    duration: number
+  }
+
+  export const zoomIn = ({delay, duration} : zoomInProp) => ({
     hidden: {
       scale: 0,
       opacity: 0,

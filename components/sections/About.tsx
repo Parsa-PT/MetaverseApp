@@ -2,13 +2,12 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import { TypingText } from '../Customtext'
-import styles from '@/style'
-import { navVariants , slideIn, staggerContainer , textVariant , fadeIn  } from '@/utils/motion'
+import { navVariants , staggerContainer , fadeIn  } from '@/utils/motion'
 import Image from 'next/image'
 
 const About = () => {
   return (
-    <section className='sm:p-16 xs:p-8 px-6 py-12 relative z-10'>
+    <section id='about' className='sm:p-16 xs:p-8 px-6 py-12 relative z-10'>
         <div className=' gradient-02  -z-10'/>
              <motion.div variants={staggerContainer({staggerChildren : 0.25 , delayChildren : 1})} initial='hidden' whileInView='show' viewport={{once:false , amount:0.25}} className='2xl:max-w-[1280px] w-full mx-auto  flex justify-center items-center flex-col'>
                 <TypingText title='| About Metaverse' textStyle='text-center'/>

@@ -10,6 +10,14 @@
   scroll-behavior: smooth;
 }
 
+html{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -75,6 +83,17 @@
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
+.gradient-07 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(106, 45, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
 
 .gradient-05 {
   background: linear-gradient(
@@ -95,6 +114,10 @@
   filter: blur(175px);
 }
 
+.navblur{
+  backdrop-filter: blur(25px);
+}
+
 .footer-gradient {
   position: absolute;
   width: 500px;
@@ -104,4 +127,11 @@
 
   background: #65c4fa;
   filter: blur(150px);
+}
+
+.shadow{
+  box-shadow: 0px 0px 80px 10px #8803838c;
+}
+.shadow2{
+  box-shadow: 0px 0px 80px 10px #606ad4;
 }

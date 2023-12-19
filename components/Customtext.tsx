@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import {motion} from 'framer-motion'
-import { navVariants , slideIn, staggerContainer , textVariant , fadeIn, textContainer, textVariant2  } from '@/utils/motion'
+import {  textContainer, textVariant2  } from '@/utils/motion'
 
 type textprop ={
     title : string,
